@@ -3,6 +3,7 @@ from sklearn.decomposition import PCA, TruncatedSVD
 import matplotlib
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 
 def plot_LSA(test_data, test_labels, savepath="PCA_demo.csv", plot=True):
