@@ -1,5 +1,6 @@
 
 from sklearn.decomposition import PCA, TruncatedSVD
+import matplotlib
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 
