@@ -17,7 +17,3 @@ def plot_LSA(test_data, test_labels, savepath="PCA_demo.csv", plot=True):
             green_patch = mpatches.Patch(color='blue', label='Disaster')
             plt.legend(handles=[red_patch, green_patch], prop={'size': 30})
 
-
-fig = plt.figure(figsize=(16, 16))          
-plot_LSA(X_train_counts, y_train)
-plt.show()
