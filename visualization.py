@@ -100,14 +100,14 @@ def plot_important_words(top_scores, top_words, bottom_scores, bottom_words, nam
 
     plt.subplot(121)
     plt.barh(y_pos,bottom_scores, align='center', alpha=0.5)
-    plt.title('Irrelevant', fontsize=20)
+    plt.title('Affirm', fontsize=20)
     plt.yticks(y_pos, bottom_words, fontsize=14)
     plt.suptitle('Key words', fontsize=16)
     plt.xlabel('Importance', fontsize=20)
     
     plt.subplot(122)
     plt.barh(y_pos,top_scores, align='center', alpha=0.5)
-    plt.title('Disaster', fontsize=20)
+    plt.title('Reversal', fontsize=20)
     plt.yticks(y_pos, top_words, fontsize=14)
     plt.suptitle(name, fontsize=16)
     plt.xlabel('Importance', fontsize=20)
@@ -115,3 +115,9 @@ def plot_important_words(top_scores, top_words, bottom_scores, bottom_words, nam
     plt.subplots_adjust(wspace=0.8)
     plt.show()
 
+def tfidf(data):
+    tfidf_vectorizer = TfidfVectorizer()
+
+    train = tfidf_vectorizer.fit_transform(data)
+
+    return train, tfidf_vectorizer
